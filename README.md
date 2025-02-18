@@ -1,4 +1,8 @@
-# Como configurar un proyecto con TypeScript
+## Clona el repositorio
+1. Instalar las dependencia `npm i`
+2. Renombrar el archivo `.env.template` a `.env`
+
+## Como configurar un proyecto con TypeScript
 ## Crear el proyecto
 1. En la terminal ejecuta:
 2. mkdir express-ts-mysql-api
