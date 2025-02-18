@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import task from './routes/task.routes'
+import taskRoutes from './routes/task.routes'
 import cors from 'cors'
 
 dotenv.config()
@@ -10,7 +10,7 @@ app.use(cors());
 
 const PORT = 4000
 
-app.use('/api', task)
+app.use('/api/tasks', taskRoutes)
 
 app.listen(PORT, ()=> {
     console.log(`Server listening in ${PORT}`)

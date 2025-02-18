@@ -20,15 +20,15 @@ export const getAllTasks = async (): Promise<Task[]> => {
     
 }
 
-export const createNewTask = async (task: Task) : Promise<void> => {
-    
-    if(!task.title || !task.description || !task.status){
-        throw new Error('All fields all required.')
-    }
-
+export const createNewTasks = async (task: Task) : Promise<void> => {
     const query = `insert into tasks (title, description, status) values (?,?,?)`;
-    await db.query(query, [task.title, task.description, task.])
-
-
-   
+    return new Promise((resolve, reject) => {
+        db.query(query, [task.title, task.description, task.status], (err) => {
+            if(err){
+                reject(err)
+            }
+            resolve()
+        })
+    })
+    
 }
